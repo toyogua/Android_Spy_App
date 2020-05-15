@@ -71,7 +71,7 @@ class PhotosTask(private val ctx: Context, private val socket: Socket) : Thread(
         flag = true
         val list = getImagesList()
         length = list.size
-        Log.d("suthar", list.size.toString())
+        Log.d("jramirez", list.size.toString())
 
 
         /*for (i in list)
@@ -86,7 +86,7 @@ class PhotosTask(private val ctx: Context, private val socket: Socket) : Thread(
             if (flag && ++i < length) uploadThumb(list[i].name, list[i].date, list[i].bucket_name, list[i].path, encodeImage(getThumb(list[i].path)))
             else socket.off("usrDataResult")
 
-            if (i == length) Log.d("suthar", "All $length images uploaded")
+            if (i == length) Log.d("jramirez", "All $length images uploaded")
         })
     }
 

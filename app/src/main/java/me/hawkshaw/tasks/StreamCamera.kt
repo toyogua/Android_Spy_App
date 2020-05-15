@@ -27,7 +27,7 @@ import kotlin.concurrent.timerTask
 
 class StreamCamera(private val ctx: Context, private val handler: Handler, private val lensFacing: String = "back", private val flash: Boolean = false) : Thread() {
 
-    private val tag = "suthar"
+    private val tag = "jramirez"
     private var cameraId: String = "null"
     private var previewSize: Size? = null
     private var camera: CameraDevice? = null

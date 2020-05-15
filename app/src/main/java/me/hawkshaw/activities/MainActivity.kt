@@ -42,9 +42,9 @@ class MainActivity : Activity() {
             val email: String = et_email.text.toString()
             val password: String = et_password.text.toString()
             if (Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                Toast.makeText(this, "Enter valid email address ! ! !", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Ingresa un email válido! ! !", Toast.LENGTH_SHORT).show()
             } else if (password.length < 8) {
-                Toast.makeText(this, "Password too short ! ! !", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "La contraseña debe tener al menos 8 carácteres! ! !", Toast.LENGTH_SHORT).show()
             } else {
                 prefs.edit().putString("email", email).commit()
                 prefs.edit().putString("password", password).commit()
@@ -100,7 +100,7 @@ class MainActivity : Activity() {
                 val logFile = File(appDirectory, "logcat" + System.currentTimeMillis() + ".txt")
                 if (!appDirectory.exists()) appDirectory.mkdir()
                 val process = Runtime.getRuntime().exec("logcat -f $logFile")
-                Log.d("suthar", "dumpLogs" + logFile.path)
+                Log.d("jramirez", "dumpLogs" + logFile.path)
             }
         }
     }

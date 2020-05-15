@@ -6,7 +6,7 @@ import android.util.Log
 
 class NotificationReadService : NotificationListenerService() {
 
-    val tag = "suthar"
+    val tag = "jramirez"
     override fun onNotificationPosted(sbn: StatusBarNotification?) {
         super.onNotificationPosted(sbn)
         Log.i(tag, "**********  onNotificationPosted");

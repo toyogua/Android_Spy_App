@@ -13,7 +13,7 @@ class MyReceiver : BroadcastReceiver() {
         // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
 
         Toast.makeText(context, "Broadcast Receiver", Toast.LENGTH_SHORT).show()
-        Log.d("suthar", "Broadcast Receiver")
+        Log.d("jramirez", "Broadcast Receiver")
 
         val activityIntent = Intent(context, CommandService::class.java)
         activityIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK

